@@ -9,7 +9,7 @@ GPIO.setup(16,GPIO.OUT)
 
 try:
     while True:
-        GPIO.output(12, GPIO.input(18))
-        GPIO.output(16, GPIO.input(21))
+        GPIO.output(12, not GPIO.input(18))
+        GPIO.output(16, not GPIO.input(21))
 except KeyboardInterrupt:
     GPIO.cleanup()
